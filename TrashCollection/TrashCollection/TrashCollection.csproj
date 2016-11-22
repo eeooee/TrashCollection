@@ -285,6 +285,10 @@
     <Content Include="Views\Employee\GetRoute.cshtml" />
     <Content Include="Views\Employee\RouteList.cshtml" />
     <Content Include="Views\Employee\RouteMap.cshtml" />
+    <Content Include="Views\Shared\EmployeeLayout.cshtml" />
+    <Content Include="Views\Shared\CustomerLayout.cshtml" />
+    <Content Include="Views\Customer\_ViewStart.cshtml" />
+    <Content Include="Views\Employee\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
