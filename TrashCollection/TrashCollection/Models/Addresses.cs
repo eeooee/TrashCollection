@@ -10,14 +10,14 @@ namespace TrashCollection.Models
     public class Addresses
     {
         [Key]
-        int ID { get; set; }
+        public int ID { get; set; }
         [ForeignKey("zipCodes")]
-        int zip_code_id { get; set; }
-        ZipCodes zipCodes { get; set; }
-        string street_address_line1 { get; set; }
-        string street_address_line2 { get; set; }
-        int city_id { get; set; }
-        int state_id { get; set; }
+        public int zip_code_id { get; set; }
+        public ZipCodes zipCodes { get; set; }
+        public string street_address_line1 { get; set; }
+        public string street_address_line2 { get; set; }
+        public int city_id { get; set; }
+        public int state_id { get; set; }
 
     }
 }

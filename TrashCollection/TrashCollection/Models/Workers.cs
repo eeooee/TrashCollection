@@ -10,11 +10,11 @@ namespace TrashCollection.Models
     public class Workers
     {
         [Key]
-        int ID { get; set; }
-        [ForeignKey("ZipCodes")]
-        int zip_code_id { get; set; }
-        ZipCodes zipCodes { get; set; }
-        string fullName { get; set; }
-        string nickName { get; set; }
+        public int ID { get; set; }
+        [ForeignKey("zipCodes")]
+        public int zip_code_id { get; set; }
+        public ZipCodes zipCodes { get; set; }
+        public string fullName { get; set; }
+        public string nickName { get; set; }
     }
 }

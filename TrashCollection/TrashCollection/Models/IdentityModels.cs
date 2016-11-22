@@ -20,18 +20,29 @@ namespace TrashCollection.Models
             // Add custom user claims here
             return userIdentity;
         }
+
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Addresses> addresses { get; set; }
+        public DbSet<City> city { get; set; }
+        public DbSet<Customers> customers { get; set; }
+        public DbSet<Pickup> pickUp { get; set; }
+        public DbSet<States> states { get; set; }
+        public DbSet<Vacation> vacation { get; set; }
+        public DbSet<Workers> workers { get; set; }
+        public DbSet<ZipCodes> zipCodes { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+
         }
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+        
     }
 }

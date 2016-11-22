@@ -9,9 +9,9 @@ namespace TrashCollection.Models
     public class Vacation
     {
         [Key]
-        int ID { get; set; }
-        bool on_vacation { get; set; }
-        DateTime returnDate { get; set; }
+        public int ID { get; set; }
+        public bool on_vacation { get; set; }
+        public DateTime returnDate { get; set; }
 
     }
 }

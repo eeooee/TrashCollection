@@ -9,7 +9,7 @@ namespace TrashCollection.Models
     public class ZipCodes
     {
         [Key]
-        int ID { get; set; }
-        int zipCode { get; set; }
+        public int ID { get; set; }
+        public int zipCode { get; set; }
     }
 }
