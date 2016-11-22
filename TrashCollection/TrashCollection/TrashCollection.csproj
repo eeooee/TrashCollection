@@ -213,13 +213,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Addresses.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Customers.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Pickup.cs" />
+    <Compile Include="Models\States.cs" />
+    <Compile Include="Models\Vacation.cs" />
+    <Compile Include="Models\Workers.cs" />
+    <Compile Include="Models\ZipCodes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\TrashCity.mdf" />
+    <Content Include="App_Data\TrashCity_log.ldf">
+      <DependentUpon>TrashCity.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -290,9 +303,7 @@
     <Content Include="Views\Customer\_ViewStart.cshtml" />
     <Content Include="Views\Employee\_ViewStart.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
