@@ -42,7 +42,7 @@ namespace TrashCollection.Controllers
                 });
                 context.SaveChanges();
                 ViewBag.ResultMessage = "Role Created Successfully!";
-                return RedirectToAction("Index");
+                return RedirectToAction("Portal");
 
             }
             catch { return View();
