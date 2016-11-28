@@ -48,5 +48,21 @@ namespace TrashCollection.Controllers
             catch { return View();
             }
         }
+
+        public ActionResult Delete(string RoleName)
+        {
+            var thisRole = context.Roles.Where(r => r.Name.Equals(RoleName, StringComparison.CurrentCultureIgnoreCase)).FirstOrDefault();
+            context.Roles.Remove(thisRole);
+            context.SaveChanges();
+            return RedirectToAction("Portal");
+        }
+
+        public ActionResult Manage()
+        {
+            var list = context.Roles.OrderBy(r => r.Name).ToList().Select(rr =>
+              new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
+            ViewBag.Roles = list;
+            return View();
+        }
     }
 }

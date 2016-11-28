@@ -310,6 +310,9 @@
     <Content Include="Views\Roles\Create.cshtml" />
     <Content Include="Views\Account\Create.cshtml" />
     <Content Include="Views\Roles\Portal.cshtml" />
+    <Content Include="Views\Roles\Edit.cshtml" />
+    <Content Include="Views\Roles\Manage.cshtml" />
+    <Content Include="Views\Customer\myProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
