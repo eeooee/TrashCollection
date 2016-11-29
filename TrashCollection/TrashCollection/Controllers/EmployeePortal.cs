@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TrashCollection.Models;
-
+using TrashCollection.ViewModels;
 
 namespace TrashCollection.Controllers
 {
