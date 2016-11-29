@@ -1,7 +1,27 @@
-﻿
+﻿@model TrashCollection.ViewModels.VacationViewModel
 @{
     ViewBag.Title = "Vacation";
+    Layout = "~/Views/Shared/CustomerLayout.cshtml";
 }
 
 <h2>Vacation</h2>
 
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.vacation.returnDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.vacation.returnDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.vacation.returnDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+    </div>
+}  

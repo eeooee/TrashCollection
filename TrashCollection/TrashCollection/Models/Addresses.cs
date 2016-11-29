@@ -17,7 +17,9 @@ namespace TrashCollection.Models
         public string street_address_line1 { get; set; }
         public string street_address_line2 { get; set; }
         public int city_id { get; set; }
+        [ForeignKey("state")]
         public int state_id { get; set; }
+        public States state { get; set; }
 
     }
 }
