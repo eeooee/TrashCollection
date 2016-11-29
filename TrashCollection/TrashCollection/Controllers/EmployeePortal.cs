@@ -19,8 +19,7 @@ namespace TrashCollection.Controllers
 
         public ActionResult Portal()
         {
-            var zipCodes = context.zipCodes.AsEnumerable().ToList();
-            return View(new PortalViewModel { ZipCodes = zipCodes });
+            return View();
         }
 
         public ActionResult GetRoute()
@@ -32,8 +31,9 @@ namespace TrashCollection.Controllers
 
         public ActionResult RouteList()
         {
-           
-            return View();
+
+            var zipCodes = context.zipCodes.AsEnumerable().ToList();
+            return View(new RouteListViewModel { ZipCodes = zipCodes });
         }
 
         public ActionResult RouteMap()

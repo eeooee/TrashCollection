@@ -227,7 +227,7 @@
     <Compile Include="Models\Addresses.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Customers.cs" />
-    <Compile Include="Models\PortalViewModel.cs" />
+    <Compile Include="ViewModels\RouteListViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Pickup.cs" />
