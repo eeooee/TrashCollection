@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "EmployeePortal";
-    Layout = "~/Views/Shared/CustomerLayout.cshtml";
+    Layout = "~/Views/Shared/EmployeeLayout.cshtml";
 }
 
 <h2>EmployeePortal</h2>
@@ -9,10 +9,5 @@
 
 <div class="jumbotron">
     <p>this is where workers will meet their needz</p>
-    <select>
-        @foreach (var zipCode in Model.ZipCodes)
-        {
-            <option>@zipCode.zipCode</option>  //using razor
-        }
-    </select>
+    
 </div>
