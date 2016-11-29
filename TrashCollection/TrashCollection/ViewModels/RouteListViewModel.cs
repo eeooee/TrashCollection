@@ -9,5 +9,7 @@ namespace TrashCollection.ViewModels
     public class RouteListViewModel
     {
         public List<ZipCodes> ZipCodes { get; set; }
+
+
     }
 }
