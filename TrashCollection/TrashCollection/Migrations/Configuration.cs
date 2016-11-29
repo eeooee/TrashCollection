@@ -26,6 +26,7 @@ namespace TrashCollection.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            
         }
     }
 }

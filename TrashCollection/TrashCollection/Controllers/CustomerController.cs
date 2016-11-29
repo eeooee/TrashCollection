@@ -17,36 +17,23 @@ namespace TrashCollection.Controllers
             return View();
         }
 
-        
+
         public ActionResult myProfile()
         {
 
             var model = new CustomerProfileViewModel();
             return View(model);
+        }
+        [HttpPost]
+        public ActionResult myProfile(CustomerProfileViewModel viewModel)
+        { 
+            var model = new CustomerProfileViewModel();
+            return View(model);
+
+
 
         }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-
-        //public ActionResult myProfile([Bind()] Customers Customer)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        context.customers.Add(Customer);
-        //        context.SaveChanges();
-        //        return RedirectToAction("Portal");
-        //    }
-        //    return View(Customer);
-        //}
-        //[HttpPost]
-        //[AllowAnonymous]
-        //[ValidateAntiForgeryToken]
-
-        //public async Task<ActionResult> Profile(RegisterViewModel model)
-        //{
-
-        //}
+        
 
 
         public ActionResult Vacation()
@@ -61,7 +48,8 @@ namespace TrashCollection.Controllers
 
         public ActionResult ChangePickUp()
         {
-            return View();
+            var model = new ChangePickupViewModel();
+            return View(model);
         }
       
     }

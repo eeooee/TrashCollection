@@ -232,6 +232,7 @@
     <Compile Include="Models\ZipCodes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\ChangePickupViewModel.cs" />
     <Compile Include="ViewModels\CustomerProfileViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

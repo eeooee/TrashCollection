@@ -1,7 +1,7 @@
-﻿
+﻿@model TrashCollection.ViewModels.ChangePickupViewModel
 @{
     ViewBag.Title = "ChangePickup";
 }
 
 <h2>ChangePickup</h2>
-
+@Html.EnumDropDownListFor(m => m.days)
