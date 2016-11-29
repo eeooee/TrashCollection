@@ -1,7 +1,20 @@
 ﻿
 @{
     ViewBag.Title = "RouteMap";
+    Layout = "~/Views/Shared/CustomerLayout.cshtml";
 }
 
 <h2>RouteMap</h2>
 
+@*//google map API HERE*@
+
+Code.aspx
+<cc1:GMap ID="GMap1" runat="server" mapType="Normal" />
+Code.aspx.cs
+GMap1.addControl(new GControl(GControl.preBuilt.GOverviewMapControl));
+GMap1.addControl(new GControl(GControl.preBuilt.LargeMapControl));
+
+GMarker marker = new GMarker(new GLatLng(39.5, -3.2));
+GInfoWindow window = new GInfoWindow(marker, "<center><b>GoogleMaps.Subgurim.NET</b></center>", true);
+
+GMap1.addInfoWindow(window);

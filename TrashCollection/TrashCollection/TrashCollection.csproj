@@ -218,11 +218,16 @@
     <Compile Include="Migrations\201611222309507_initialMigration.Designer.cs">
       <DependentUpon>201611222309507_initialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611282102563_Initial.cs" />
+    <Compile Include="Migrations\201611282102563_Initial.Designer.cs">
+      <DependentUpon>201611282102563_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Addresses.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\PortalViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Pickup.cs" />
@@ -234,6 +239,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-TrashCollection-20161121105041.mdf" />
+    <Content Include="App_Data\aspnet-TrashCollection-20161121105041_log.ldf">
+      <DependentUpon>aspnet-TrashCollection-20161121105041.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\TrashCity.mdf" />
     <Content Include="App_Data\TrashCity_log.ldf">
       <DependentUpon>TrashCity.mdf</DependentUpon>
@@ -325,6 +334,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611222309507_initialMigration.resx">
       <DependentUpon>201611222309507_initialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611282102563_Initial.resx">
+      <DependentUpon>201611282102563_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
