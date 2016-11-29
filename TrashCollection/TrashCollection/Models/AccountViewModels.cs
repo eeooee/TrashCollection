@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace TrashCollection.Models
@@ -64,6 +65,11 @@ namespace TrashCollection.Models
 
     public class RegisterViewModel
     {
+        public IdentityRole roles { get; set; }
+        [Required]
+        public string FullName { get; set; }
+
+        public string NickName { get; set; }
         [Required]
         public string Name { get; set; }
 
@@ -82,6 +88,18 @@ namespace TrashCollection.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required(ErrorMessage = "Please enter an address.")]
+        public string StreetAddress { get; set; }
+        
+        public string StreetAddress2 { get; set; }
+
+        [Required(ErrorMessage = "Please select a state.")]
+        public States state { get; set; }
+        [Required(ErrorMessage = "Please enter a Zip Code.")]
+        [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Invalid Zip")]
+        public ZipCodes zipCode { get; set; }
+
     }
 
     public class ResetPasswordViewModel
