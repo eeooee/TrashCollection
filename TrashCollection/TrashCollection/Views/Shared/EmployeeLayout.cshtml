@@ -17,23 +17,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Trash City Employee", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Trash City", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Portal", "Employee")</li>
-                    <li class="dropdown active">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            Pickup Routes
-                            <span class="caret"></span>
-                        </a>
-
-                    <ul class="dropdown-menu">
                         <li>@Html.ActionLink("Check route by zip code", "RouteList", "Employee")</li>
                         <li>@Html.ActionLink("Get a route map", "RouteMap", "Employee")</li>
                     </ul>
-                        </li>
-                </ul>
+                
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
@@ -42,7 +33,8 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Trash City</p>
+            <small>Done as an assignment during week 7 of DevCodeCamp in Milwaukee, Wi.</small>
         </footer>
     </div>
 
