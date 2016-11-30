@@ -222,6 +222,10 @@
     <Compile Include="Migrations\201611291708092_changed_address_table.Designer.cs">
       <DependentUpon>201611291708092_changed_address_table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611301506000_idset.cs" />
+    <Compile Include="Migrations\201611301506000_idset.Designer.cs">
+      <DependentUpon>201611301506000_idset.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Addresses.cs" />
@@ -401,6 +405,7 @@
     <Content Include="Views\Roles\Edit.cshtml" />
     <Content Include="Views\Roles\Manage.cshtml" />
     <Content Include="Views\Customer\myProfile.cshtml" />
+    <Content Include="Views\Account\_CustomerProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -419,6 +424,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611291708092_changed_address_table.resx">
       <DependentUpon>201611291708092_changed_address_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611301506000_idset.resx">
+      <DependentUpon>201611301506000_idset.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

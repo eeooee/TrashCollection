@@ -67,12 +67,10 @@ namespace TrashCollection.Models
     {
         public IdentityRole roles { get; set; }
         [Required]
-        public string FullName { get; set; }
-
-        public string NickName { get; set; }
-        [Required]
         public string Name { get; set; }
 
+        public string FullName { get; set; }
+        public string NickName { get; set; }
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

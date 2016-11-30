@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.ComponentModel.DataAnnotations;
+using TrashCollection.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrashCollection.Models
 {
@@ -13,6 +15,15 @@ namespace TrashCollection.Models
     {
         [Key]
         int ID { get; set; }
+        
+       public int? customer_ID { get; set; }
+        [ForeignKey("customer_ID")]
+        public virtual Customers customer { get; set; }
+       public int? worker_ID { get; set; }
+
+        [ForeignKey("worker_ID")]
+        public virtual Workers workers { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

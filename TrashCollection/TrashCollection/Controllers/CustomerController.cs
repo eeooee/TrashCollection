@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using TrashCollection.Models;
 using TrashCollection.ViewModels;
+using Microsoft.AspNet.Identity;
 
 namespace TrashCollection.Controllers
 {
@@ -41,8 +42,9 @@ namespace TrashCollection.Controllers
             return View();
         }
 
-        public ActionResult Billing()
+        public ActionResult Billing(int id)
         {
+            //var userId = User.Identity.GetUserIdentity();
             return View(); 
         }
 

@@ -10,5 +10,9 @@ namespace TrashCollection.ViewModels
     {
         public Customers customer { get; set; }
         public Addresses addresses { get; set; }
+        
+        public string FullName { get; set; }
+
+        public string NickName { get; set; }
     }
 }
