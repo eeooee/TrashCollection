@@ -242,6 +242,7 @@
     <Compile Include="ViewModels\VacationViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\custom-layout.css" />
     <Content Include="Content\bootstrap-datepicker.css" />
     <Content Include="Content\bootstrap-datepicker.min.css" />
     <Content Include="Content\bootstrap-datepicker.standalone.css" />
