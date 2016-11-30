@@ -24,26 +24,8 @@
     @Html.AntiForgeryToken()
     <h4>Create a new account.</h4>
     <hr />
-    <label for="chkYes">
-        <input type="checkbox" id="chkYes" name="isCustomer" />
-        Are you a customer of Trash City?
-    </label>
-  <div id="Customer" style="display:none">
-       @Html.ValidationSummary("", new { @class = "text-danger" })
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.NickName, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.NickName, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.FullName, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
-        </div>
-    </div>
-    </div>
+    @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
         @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
@@ -63,27 +45,16 @@
         </div>
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.StreetAddress, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.StreetAddress, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.StreetAddress2, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.StreetAddress2, new { @class = "form-control" })
-        </div>
-    </div>
+    <label for="chkYes">
+        <input type="checkbox" id="chkYes" name="isCustomer" />
+        Are you a customer of Trash City?
+    </label>
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.zipCode, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.zipCode, new { @class = "form-control" })
-        </div>
-    </div>
+    <div id="Customer" style="display:none">
 
-    <div class="form-group">
+     @Html.Partial("_CustomerProfile", new TrashCollection.ViewModels.CustomerProfileViewModel());
+    </div> 
+     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" class="btn btn-default" value="Register" />
         </div>

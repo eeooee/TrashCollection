@@ -9,6 +9,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using TrashCollection.Models;
+using System.Collections.Generic;
+using TrashCollection.Migrations;
+using System.Data;
 
 namespace TrashCollection.Controllers
 {
@@ -137,11 +140,13 @@ namespace TrashCollection.Controllers
 
         //
         // GET: /Account/Register
+       
         [AllowAnonymous]
         public ActionResult Register()
         {
             ViewBag.Name = new SelectList(context.Roles.ToList(), "Name", "Name");
-            return View();
+            var model = new RegisterViewModel();
+            return View(model);
         }
 
         //
@@ -154,17 +159,11 @@ namespace TrashCollection.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                var address = new Addresses
-                {
-                    street_address_line1 = model.StreetAddress,
-                    street_address_line2 = model.StreetAddress2,
-                    zipCodes = model.zipCode,
-                    state  = model.state,
-                };
+       
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await this.UserManager.AddToRoleAsync(user.Id, model.Name);
+                    await this.UserManager.AddToRoleAsync(user.Id, "dummy");
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
@@ -172,7 +171,7 @@ namespace TrashCollection.Controllers
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-
+                  
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
@@ -182,6 +181,29 @@ namespace TrashCollection.Controllers
             return View(model);
         }
 
+        private IEnumerable<States> GetAllStates()
+        {
+            List<States> statesList = new List<States>();
+            foreach (States state in context.states)
+            {
+                statesList.Add(state);
+                
+            }
+            return statesList;
+        }
+        private IEnumerable<SelectListItem> GetSelectListItems(IEnumerable<States> elements)
+        {
+            var selectList = new List<SelectListItem>();
+            foreach(var element in elements)
+            {
+                selectList.Add(new SelectListItem
+                {
+                    Value = element.ID.ToString(),
+                    Text = element.name,
+                });
+            }
+            return selectList;
+        }
         //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]

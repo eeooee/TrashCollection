@@ -1,1 +1,42 @@
-﻿
+﻿@model TrashCollection.ViewModels.CustomerProfileViewModel
+{
+}
+<div class="form-group">
+    @Html.LabelFor(m => m.NickName, new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.NickName, new { @class = "form-control" })
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.FullName, new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(m => m.StreetAddress, new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.StreetAddress, new { @class = "form-control" })
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.StreetAddress2, new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.StreetAddress2, new { @class = "form-control" })
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.selectedStateId, new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+       @Html.DropDownListFor(m => m.selectedStateId, Model.StatesList, "Select a state", new { @class = "form-control" })
+    </div>
+</div>
+
+
+<div class="form-group">
+    @Html.LabelFor(m => m.zipCode, new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.zipCode, new { @class = "form-control" })
+    </div>
+</div>
