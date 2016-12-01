@@ -12,10 +12,12 @@ namespace TrashCollection.ViewModels
     {
         public Customers customer { get; set; }
         public States states { get; set; }
+        public Addresses address { get; set; }
+        public City city { get; set; }
         public string FullName { get; set; }
         public string NickName { get; set; }
 
-
+        public string City { get; set; }
         [Required(ErrorMessage = "Please enter an address.")]
         public string StreetAddress { get; set; }
 
