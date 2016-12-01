@@ -1,0 +1,19 @@
+﻿@model TrashCollection.ViewModels.RouteViewModel
+
+@{
+
+    ViewBag.Title = "Route";
+    Layout = "~/Views/Shared/EmployeeLayout.cshtml";
+}
+
+<h2>Customers in route for zip code @Model.ZipCode</h2>
+
+<table>
+    @foreach (var customer in Model.Customers)
+    {
+        <tr>
+            <td>@customer.fullName</td>
+            <td>@customer.nickName</td>
+        </tr>
+    }
+</table>

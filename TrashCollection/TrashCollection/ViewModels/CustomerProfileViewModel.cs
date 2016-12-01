@@ -25,7 +25,7 @@ namespace TrashCollection.ViewModels
         [Display(Name = "State")]
         [Required(ErrorMessage = "Please select a state.")]
         public int selectedStateId { get; set; }
-        public IEnumerable<SelectListItem> StatesList { get; set }
+        public IEnumerable<SelectListItem> StatesList { get; set; }
         [Required(ErrorMessage = "Please enter a Zip Code.")]
         [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Invalid Zip")]
         public ZipCodes zipCode { get; set; }

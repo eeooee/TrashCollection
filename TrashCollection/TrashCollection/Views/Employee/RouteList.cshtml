@@ -10,10 +10,11 @@
 <h2>RouteList</h2>
 
 
-<select>
+<select onchange="location = '/Employee/Route/' + this.options[this.selectedIndex].value;">
+    <option>Please select a zip code...</option>
     @foreach (var zipCode in Model.ZipCodes)
     {
-        <option>@zipCode.zipCode</option>  //using razor
+        <option value="@zipCode.ID">@zipCode.zipCode</option>
     }
 </select>
 

@@ -34,16 +34,23 @@ namespace TrashCollection.Controllers
 
             var zipCodes = context.zipCodes.AsEnumerable().ToList();
             return View(new RouteListViewModel { ZipCodes = zipCodes });
+        
+        
 
 
         }
-        [HttpPost]
-        public ActionResult RouteList(int zipCode)
+        
+        public ActionResult Route(int id)
         {
 
             //ViewBag.Message = zipCode;    
             //return View(new CustomerProfileViewModel { customer }   //comment out until method is written in customer controller
-            return View();
+
+            // TODO: Filter customers further
+            var zipCode = context.zipCodes.First(z => z.ID == id).zipCode;
+            var customers = context.customers.Where(c => c.addresses.zip_code_id == id).ToList();
+
+            return View(new RouteViewModel { ZipCode = zipCode, Customers = customers } );
 
 
         }
