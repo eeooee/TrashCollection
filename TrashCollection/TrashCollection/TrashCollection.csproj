@@ -212,6 +212,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\WorkerProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -241,7 +242,7 @@
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Customers.cs" />
     <Compile Include="ViewModels\CustomerProfileViewModel.cs" />
-    <Compile Include="ViewModels\RouteListViewModel.cs" />
+    <Compile Include="Models\RouteListViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Pickup.cs" />
@@ -253,6 +254,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\ChangePickupViewModel.cs" />
     <Compile Include="ViewModels\VacationViewModel.cs" />
+    <Compile Include="ViewModels\WorkerProfileViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\custom-layout.css" />
@@ -416,6 +418,7 @@
     <Content Include="Views\Customer\myProfile.cshtml" />
     <Content Include="Views\Shared\_CustomersProfile.cshtml" />
     <Content Include="Views\Account\_WorkerProfile.cshtml" />
+    <Content Include="Views\Shared\_WorkersProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -427,6 +430,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\WorkerProfile\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611291347163_initial.resx">

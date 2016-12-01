@@ -17,6 +17,15 @@
             }
         });
     });
+    $(function () {
+        $("input[name='isWorker']").click(function () {
+            if ($("#WorkerYes").is(":checked")) {
+                $("#Worker").show();
+            } else {
+                $("#Worker").hide();
+            }
+        });
+    });
 </script>
 }
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
@@ -50,6 +59,14 @@
         Are you a customer of Trash City?
     </label>
 
+    <label for="workerYes">
+        <input type="checkbox" id="workerYes" name="isWorker" />
+        Are you an employee of Trash City?
+    </label>
+    <div id="Worker" style="display:none">
+
+        @*@Html.Action("_WorkersProfile", "WorkersProfile")*@
+    </div>
     <div id="Customer" style="display:none">
 
      @Html.Action("_CustomersProfile", "CustomersProfile")
