@@ -6,15 +6,24 @@
 
 <h2>RouteMap</h2>
 
-@*//google map API HERE*@
 
-Code.aspx
-<cc1:GMap ID="GMap1" runat="server" mapType="Normal" />
-Code.aspx.cs
-GMap1.addControl(new GControl(GControl.preBuilt.GOverviewMapControl));
-GMap1.addControl(new GControl(GControl.preBuilt.LargeMapControl));
+    @*API KEY = AIzaSyDuRnUrUd-zl-x_zdPUpMIeaE0Q1MmSmNI*@
+     
 
-GMarker marker = new GMarker(new GLatLng(39.5, -3.2));
-GInfoWindow window = new GInfoWindow(marker, "<center><b>GoogleMaps.Subgurim.NET</b></center>", true);
-
-GMap1.addInfoWindow(window);
+<section id="map" style="width:70%; height:500px;"></section>
+<section id="address" style="width:70%; height:500px;"></section>
+<script language="javascript">
+   var geocoder;
+   var map;
+   function initialize(){
+       geocoder = new google.maps.Geocoder();
+       var latlng = new google.maps.LatLng(43.038900001, -87.906500001);
+       var mapOptions = {
+           zoom: 16,
+           center: latlng
+       }
+      map = new google.maps.Map(document.getElementById('map'), mapOptions);
+   }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuRnUrUd-zl-x_zdPUpMIeaE0Q1MmSmNI&callback=initialize">
+</script>

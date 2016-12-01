@@ -34,6 +34,18 @@ namespace TrashCollection.Controllers
 
             var zipCodes = context.zipCodes.AsEnumerable().ToList();
             return View(new RouteListViewModel { ZipCodes = zipCodes });
+
+
+        }
+        [HttpPost]
+        public ActionResult RouteList(int zipCode)
+        {
+
+            //ViewBag.Message = zipCode;    
+            //return View(new CustomerProfileViewModel { customer }   //comment out until method is written in customer controller
+            return View();
+
+
         }
 
         public ActionResult RouteMap()

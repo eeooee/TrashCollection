@@ -8,6 +8,8 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
+using System.Data;
+using System.Data.Entity;
 
 namespace TrashCollection
 {
@@ -20,6 +22,8 @@ namespace TrashCollection
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Database.SetInitializer<Models.ApplicationDbContext>(null);
         }
     }
 }
