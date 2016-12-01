@@ -236,6 +236,10 @@
     <Compile Include="Migrations\201612010029053_newaddresses.Designer.cs">
       <DependentUpon>201612010029053_newaddresses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612011528126_add-migration sample zips.cs" />
+    <Compile Include="Migrations\201612011528126_add-migration sample zips.Designer.cs">
+      <DependentUpon>201612011528126_add-migration sample zips.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Addresses.cs" />
@@ -253,6 +257,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\ChangePickupViewModel.cs" />
+    <Compile Include="ViewModels\RouteViewModel.cs" />
     <Compile Include="ViewModels\VacationViewModel.cs" />
     <Compile Include="ViewModels\WorkerProfileViewModel.cs" />
   </ItemGroup>
@@ -430,7 +435,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\WorkerProfile\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611291347163_initial.resx">
@@ -447,6 +451,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612010029053_newaddresses.resx">
       <DependentUpon>201612010029053_newaddresses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612011528126_add-migration sample zips.resx">
+      <DependentUpon>201612011528126_add-migration sample zips.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
