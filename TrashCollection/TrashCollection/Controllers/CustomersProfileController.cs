@@ -23,6 +23,8 @@ namespace TrashCollection.Controllers
         // GET: CustomersProfile
         public ActionResult _CustomersProfile()
         {
+
+            context = new ApplicationDbContext();
             var model = new CustomerProfileViewModel();
             var states = GetAllStates();
             model.StatesList = GetSelectListItems(states);
@@ -35,6 +37,10 @@ namespace TrashCollection.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult _CustomersProfile(CustomerProfileViewModel model)
         {
+
+            context = new ApplicationDbContext();
+            var states = GetAllStates();
+            model.StatesList = GetSelectListItems(states);
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -44,11 +50,11 @@ namespace TrashCollection.Controllers
                     street_address_line1 = model.StreetAddress,
                     street_address_line2 = model.StreetAddress2,
                     zipCodes = model.zipCode,
+                    city_id = model.city.ID,
                     state_id = model.selectedStateId,
                 };
 
-            // If we got this far, something failed, redisplay form
-            return View(model);
+            return PartialView(model);
         }
 
         private IEnumerable<States> GetAllStates()

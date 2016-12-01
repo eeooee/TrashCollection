@@ -231,6 +231,10 @@
     <Compile Include="Migrations\201611301622094_states.Designer.cs">
       <DependentUpon>201611301622094_states.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612010029053_newaddresses.cs" />
+    <Compile Include="Migrations\201612010029053_newaddresses.Designer.cs">
+      <DependentUpon>201612010029053_newaddresses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Addresses.cs" />
@@ -410,7 +414,7 @@
     <Content Include="Views\Roles\Edit.cshtml" />
     <Content Include="Views\Roles\Manage.cshtml" />
     <Content Include="Views\Customer\myProfile.cshtml" />
-    <Content Include="Views\Account\_CustomerProfile.cshtml" />
+    <Content Include="Views\Shared\_CustomersProfile.cshtml" />
     <Content Include="Views\Account\_WorkerProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -436,6 +440,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611301622094_states.resx">
       <DependentUpon>201611301622094_states.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612010029053_newaddresses.resx">
+      <DependentUpon>201612010029053_newaddresses.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
